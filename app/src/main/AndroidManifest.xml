@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vsantander.blockchaininfochallenge">
 
+    <!--permissions-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".BlockchainInfoChallengeApp"
         android:allowBackup="true"
@@ -8,5 +11,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" />
+        android:theme="@style/AppTheme" >
+
+        <!--activities-->
+        <activity
+            android:name=".presentation.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".presentation.info.TransactionsInfoActivity" />
+
+    </application>
+
 </manifest>
