@@ -38,7 +38,7 @@ class TransactionsInfoActivity : BaseActivity() {
             it ?: return@observe
         }
 
-        viewModel.loadInfo()
+        viewModel.loadInfoTransactions()
     }
 
 }

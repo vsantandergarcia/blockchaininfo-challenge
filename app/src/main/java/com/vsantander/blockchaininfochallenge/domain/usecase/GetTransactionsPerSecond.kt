@@ -6,9 +6,9 @@ import com.vsantander.blockchaininfochallenge.domain.usecase.base.SingleUseCase
 import io.reactivex.Single
 import javax.inject.Inject
 
-class GetTransactionPerSecond @Inject constructor(
+class GetTransactionsPerSecond @Inject constructor(
         private val repository: TransactionRepositoryImpl
-) : SingleUseCase<GetTransactionPerSecond.RequestValues, List<TransactionPerSecond>>() {
+) : SingleUseCase<GetTransactionsPerSecond.RequestValues, List<TransactionPerSecond>>() {
 
     class RequestValues constructor(
             val timespan: String,
