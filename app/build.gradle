@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.appVersionCode
+        versionName rootProject.ext.appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    /* Android core */
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
+    /* kotlin core */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+
+    /* kotlin/java utils */
+    implementation "com.google.dagger:dagger:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlinVersion"
+
+    /* unit testing */
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.androidRunnerVersion"
+
+    /* ui testing */
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoCoreVersion"
+}
