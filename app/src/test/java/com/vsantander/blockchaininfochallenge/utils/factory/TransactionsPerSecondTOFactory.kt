@@ -19,8 +19,8 @@ class TransactionsPerSecondTOFactory {
 
         private fun makeTransactionPerSecondTOModel(): TransactionPerSecondTO {
             return TransactionPerSecondTO(
-                timestamp = DataFactory.randomDouble(),
-                numberBitcoins = DataFactory.randomDouble()
+                timestamp = DataFactory.randomFloat(),
+                numberBitcoins = DataFactory.randomFloat()
             )
         }
     }

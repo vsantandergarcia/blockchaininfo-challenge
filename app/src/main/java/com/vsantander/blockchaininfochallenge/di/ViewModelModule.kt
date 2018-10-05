@@ -3,7 +3,7 @@ package com.vsantander.blockchaininfochallenge.di
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.vsantander.blockchaininfochallenge.presentation.base.viewmodel.ViewModelFactory
-import com.vsantander.blockchaininfochallenge.presentation.info.TransactionsInfoViewModel
+import com.vsantander.blockchaininfochallenge.presentation.transactioninfo.TransactionsInfoViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

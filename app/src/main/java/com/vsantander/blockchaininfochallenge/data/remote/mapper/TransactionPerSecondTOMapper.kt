@@ -8,7 +8,7 @@ class TransactionPerSecondTOMapper @Inject constructor() {
 
     fun toEntity(value: TransactionPerSecondTO): TransactionPerSecond {
         return TransactionPerSecond(
-                timestamp = value.timestamp,
+                timestamp = value.timestamp * 1000, // timestamp in miliseconds
                 numberBitcoins = value.numberBitcoins)
     }
 

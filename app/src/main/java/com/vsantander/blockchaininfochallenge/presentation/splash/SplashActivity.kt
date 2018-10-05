@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.vsantander.blockchaininfochallenge.R
 import com.vsantander.blockchaininfochallenge.presentation.base.activity.BaseActivity
-import com.vsantander.blockchaininfochallenge.presentation.info.TransactionsInfoActivity
+import com.vsantander.blockchaininfochallenge.presentation.transactioninfo.TransactionsInfoActivity
 import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
 

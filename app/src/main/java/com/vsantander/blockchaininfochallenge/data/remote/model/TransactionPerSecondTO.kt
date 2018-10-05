@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 data class TransactionPerSecondTO (
         @SerializedName("x")
-        val timestamp: Double,
+        val timestamp: Float,
 
         @SerializedName("y")
-        val numberBitcoins: Double
+        val numberBitcoins: Float
 )

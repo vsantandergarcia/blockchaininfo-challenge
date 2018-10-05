@@ -1,6 +1,6 @@
 package com.vsantander.blockchaininfochallenge.di
 
-import com.vsantander.blockchaininfochallenge.presentation.info.TransactionsInfoActivity
+import com.vsantander.blockchaininfochallenge.presentation.transactioninfo.TransactionsInfoActivity
 import com.vsantander.blockchaininfochallenge.presentation.splash.SplashActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -11,7 +11,7 @@ abstract class ActivityModule {
     @ContributesAndroidInjector
     internal abstract fun contributeSplashActivity(): SplashActivity
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [TransactionsInfoModule::class])
     internal abstract fun contributeTransactionsInfoActivity(): TransactionsInfoActivity
 
 }

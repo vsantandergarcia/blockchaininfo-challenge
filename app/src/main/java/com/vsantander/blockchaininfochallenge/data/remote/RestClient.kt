@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface RestClient {
 
-    @GET("transactions-per-second?format=json")
+    @GET("transactions-per-second?&format=json")
     fun getTransactionsPerSecond(
             @Query("timespan") timespan: String,
             @Query("rollingAverage") rollingAverage: String

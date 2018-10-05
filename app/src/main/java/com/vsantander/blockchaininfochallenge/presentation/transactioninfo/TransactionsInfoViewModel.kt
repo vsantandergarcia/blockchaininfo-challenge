@@ -1,4 +1,4 @@
-package com.vsantander.blockchaininfochallenge.presentation.info
+package com.vsantander.blockchaininfochallenge.presentation.transactioninfo
 
 import android.arch.lifecycle.MutableLiveData
 import com.vsantander.blockchaininfochallenge.domain.model.TransactionPerSecond
@@ -7,6 +7,7 @@ import com.vsantander.blockchaininfochallenge.extension.logd
 import com.vsantander.blockchaininfochallenge.extension.loge
 import com.vsantander.blockchaininfochallenge.presentation.base.viewmodel.BaseViewModel
 import com.vsantander.blockchaininfochallenge.presentation.model.Resource
+import com.vsantander.blockchaininfochallenge.utils.Constants
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.subscribeBy
@@ -22,7 +23,8 @@ class TransactionsInfoViewModel @Inject constructor(
     fun loadInfoTransactions() {
         resource.value = Resource.loading()
 
-        val params = GetTransactionsPerSecond.RequestValues("4weeks", "8hours")
+        val params = GetTransactionsPerSecond.RequestValues(Constants.DEFAULT_TIMESPAN,
+                Constants.DEFAULT_ROLLINGAVERAGE)
         disposables += getTransactionsPerSecond.buildUseCase(params)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -37,4 +39,5 @@ class TransactionsInfoViewModel @Inject constructor(
                         }
                 )
     }
+
 }

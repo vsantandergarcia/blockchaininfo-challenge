@@ -33,6 +33,10 @@ dependencies {
     /* Android core */
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+
+    /* Android view utils */
+    implementation "com.github.PhilJay:MPAndroidChart:$rootProject.mpChartVersion"
 
     /* kotlin core */
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
@@ -53,6 +57,7 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp3LoggingInterceptor"
     implementation "org.jetbrains.anko:anko-commons:$rootProject.ankoVersion"
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 
     /* unit testing */
     testImplementation "junit:junit:$rootProject.junitVersion"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Brandon Grotesque Bold-->
+    <style name="TextBrandonGrotesqueBold">
+        <item name="android:fontFamily">@font/brandongrotesque_bold</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueBold14" parent="TextBrandonGrotesqueBold">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueBold14.Black" parent="TextBrandonGrotesqueBold14">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueBold14.White" parent="TextBrandonGrotesqueBold14">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueBold20" parent="TextBrandonGrotesqueBold">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueBold20.White" parent="TextBrandonGrotesqueBold20">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

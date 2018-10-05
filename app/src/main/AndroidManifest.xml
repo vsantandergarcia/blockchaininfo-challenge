@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presentation.info.TransactionsInfoActivity" />
+        <activity android:name=".presentation.transactioninfo.TransactionsInfoActivity" />
 
     </application>
 
